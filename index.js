@@ -7,3 +7,13 @@ var typed = new Typed(".text", {
     backDelay: 1000,
     loop: true 
 });
+
+let naMenu = document.querySelector(".menu-toggle");
+console.log(naMenu);
+
+let navMenu = document.querySelector(".menu");
+console.log(navMenu);
+
+naMenu.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
