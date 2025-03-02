@@ -8,20 +8,23 @@ body{
     color: white;
     padding: 100px;
     background: rgb(39, 43, 63);
+    overflow-x: hidden;
+    margin: 0;
 }
+
 .Header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 30px 10%;
-    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
     background: rgb(70, 98, 114);
 }
+
 .logo{
     position: relative;
     font-size: 25px;
@@ -32,28 +35,24 @@ body{
     opacity: 0;
     animation: slidehight 1s ease forwards;
 }
+@keyframes slidehight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 .menu-toggle{
     display: none;
     font-size: 30px;
     cursor: pointer;
 }
-
-@media (max-width: 900px) {
-    .menu{
-        display: none;
-        flex-direction: column;
-        background: rgb(70, 98, 114);
-        position: absolute;
-        top: 0px;
-        left: 550px;
-    }
-    .menu.active{
-        display: flex;
-        padding: 0px;
-    }
-    .menu-toggle{
-        display: flex;
-    }
+.menu{
+    box-sizing: border-box;
 }
 
 .menu a{
@@ -73,17 +72,25 @@ body{
     position: relative;
     width: 100%;
     justify-content: space-between;
-    height: 100vh;
-    background: url(image/DSC_1090.jpg)0 no-repeat;
-    background-size:auto;
-    background-position: right;
-    background-size: 40%;
+    height: 90vh;
     display: flex;
-    align-items:baseline;
-    padding: 90px 5px;
+    padding: 82px 10px;
+    line-height: 4rem;
+    top: 0px;
 }
 .home-content{
-    max-width: 500px ;
+    width: 900px ;
+}
+.home-content h1{
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: rgb(243, 85, 85);
+}
+.home-content h2{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px 0;
 }
 .home-content h3{
     font-size: 30px;
@@ -95,84 +102,93 @@ body{
 .home-content h3 span{
     color: rgb(226, 137, 20);
 }
-.home-content h1{
-    font-size: 50px;
-    font-weight: 700;
-    margin: 10px 0;
-}
+
 .home-content p{
     font-size: 20px;
     background-color: rgb(57, 110, 110);
     border-radius: 50px;
-    padding: 20px 50px;
+    padding: 10px 20px;
+    width: 600px;
 }
 .home-content p:hover{
     box-shadow: 0 0 50px rgb(65, 100, 100),
     0 0 25px aqua, 0 0 50px rgb(58, 97, 97), 0 0 50px aqua,
     0 0 100px aqua; 
 }
-.home-scl a{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
+.home-scl{
+    text-align: center;
+    padding: 10px;
+    font-size: 80px;
+}
+.home-scl i{
+    width: 40px;
+    height: 40px;
     background: transparent;
     font-size: 20px;
     border: 1px solid rgb(21, 238, 209);
     border-radius: 20px;
     color: aqua;
     text-decoration: none;
-    margin: 30px 50px 30px 0;
+    margin: 50px 50px 50px 0;
+    padding: 8px 8px;
 }
 
-.home-scl a:hover{
+.home-scl i:hover{
     background: blanchedalmond;
     color: black;
     box-shadow: 0 0 20px turquoise;
 }
 .btn-box{
-    display: inline-block;
-    padding: 10px 25px;
-    background: aqua;
-    border-radius: 40px;
-    font-size: 15px;
-    color: black;
-    text-decoration: none;
-    letter-spacing: 1pt;
-    font-weight: 600 ;
-}
-.btn-box:hover{
-    box-shadow: 0 0 50px aqua,
-    0 0 25px aqua, 0 0 50px aqua, 0 0 100px aqua,
+    padding: 10px 10px;
+    background: rgb(87, 126, 129);
+    border-radius: 30px;
+    color: rgb(252, 251, 251);
+    font-size: 18px;
+ }
+ .btn-box:hover{
+    box-shadow: 0 0 50px rgb(79, 88, 88),
+    0 0 25px rgb(105, 124, 124), 0 0 50px aqua, 0 0 100px rgb(117, 133, 133),
     0 0 200px aqua; 
+    border-radius: 30px;
+    border: none;
+    color: black;
+}
+.home-img img{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 120px;
+    position: relative;
+    top: 40px;
+    left: 10px;
 }
 
-@keyframes slidehight {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
 
-img{
-    width: 70%;
-    border-radius: 100px;
-    padding: 40px;
-    max-width: 100%;
-    height: auto;
-    display: flex;
-    margin: auto;
-}
+
 
 .about{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding: 40px 0; 
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 90vh;
+    display: flex;
+    padding: 82px 20px;
+    line-height: 4rem;
+
+}
+.about-text{
+    width: 800px ;
+}
+.about-img h1{
+    visibility: hidden;
+}
+.about-img img{
+    width: 100%;
+    border-radius: 100px;
+    padding: 40px 0px;
+    max-width: 100%;
+    height: 80%;
+    display: flex;
+    margin: 10px;
 }
 .about-text h2{
     font-size: 30px;
@@ -205,11 +221,15 @@ a{
     font-size: 20px;
     font-weight: 2;
     margin-bottom: 4rem;
+    height: 120vh;
+    padding: 50px 10px ;
+    position: relative;
+    top: 10px;
 }
 .title{
     text-align: center;
     font-size: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 .title span{
     color: aqua;
@@ -268,6 +288,10 @@ a{
     gap: 3rem;
     padding-left: 30px;
     margin-top: 150px;
+    position: relative;
+    top: 50px;
+    height: 70vh;
+    padding: 90px 10px;
 }
 .contact-text h2{
     font-size: 50px;
@@ -366,4 +390,149 @@ a{
     box-shadow: 0 0 50px rgb(131, 126, 112),
     0 0 25px rgb(175, 172, 155), 0 0 50px rgb(194, 163, 98), 0 0 100px rgb(180, 146, 95),
     0 0 200px rgb(182, 174, 153); 
+}
+
+@media (max-width: 500px) {
+    .menu{
+        display: none;
+        flex-direction: column;
+        background: rgb(70, 98, 114);
+        position: absolute;
+        top: 5px;
+        left: 360px;
+    }
+    .menu.active{
+        display: flex;
+        padding: 0;
+    }
+    .menu-toggle{
+        display: flex;
+    }
+    body{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    
+    .home{
+        flex-direction: column;
+        gap: 10px;
+        height: 2000px;
+        text-align: center;
+        padding: 80px 0px;
+        line-height: 5rem;
+    }
+    .home-content h1{
+        width: 300px;
+    }
+    .home-content h2{
+        width: 300px;
+    }
+    .home-content h3{
+        width: 300px;
+    }
+    .home-content p{
+        width: 300px;
+        padding: 5px;
+    }
+    .home-scl a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .home-scl .btn-box{
+        width: 20%;
+        height: 30px;
+    }
+    .home-img img{
+        min-width: 200px;
+        position: relative;
+        top: 0px;
+    }
+
+    .about{
+        flex-direction: column;
+        gap: 30px;
+        padding: 90px 0;
+        height: 1200px;
+        width: 300px;
+    }
+    .about-img h1{
+        visibility:visible;
+        color: rgb(247, 103, 103);
+        font-size: 37px;
+    }
+    .about-text h2{
+        visibility: hidden;
+    }
+    .about-img img{
+        width: 280px; 
+        height: 400px;
+    }
+    .about-text{
+        padding: 10px;
+    }
+    .about-text p{
+        width: 300px;
+    }
+
+    .Services{
+        height: 2200px;
+        align-items: center;
+        padding: 35px 0px;
+        width: 300px;
+        justify-items: center;
+    }
+    .container h1{
+        font-size: 35px;
+    }
+    .Services-list h2{
+        font-size: 20px;
+    }
+    .Services-list p{
+        line-height: 2rem;
+        font-size: 15px;
+    }
+
+    .Services-list{
+        grid-template-columns: 1fr;
+    }
+    .read{
+        padding: 10px 10px;
+        margin-left: 35px;
+
+    }
+    .Contact{
+        grid-template-columns: 1fr;
+        padding: 100px 10px;
+        width: 300px;
+        justify-items: center;
+    }
+    .contact-text h2{
+        font-size: 38px;
+        height: 50px;
+    }
+    .contact-text h4{
+        font-size: 25px;
+        color: rgb(219, 145, 145);
+    }
+    .contact-text p{
+        font-size: 16px;
+        text-align: center;
+    }
+    .contact-list li{
+        line-height: 2rem;
+        
+    }
+    .contact-icone a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact-fars input , textarea{
+        width: 100%;
+        
+    }
 }
