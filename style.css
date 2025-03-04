@@ -8,8 +8,7 @@ body{
     color: white;
     padding: 100px;
     background: rgb(39, 43, 63);
-    overflow-x: hidden;
-    margin: 0;
+    overflow-x: visible;
 }
 
 .Header{
@@ -21,13 +20,13 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
     background: rgb(70, 98, 114);
+    z-index: 1;
 }
 
 .logo{
     position: relative;
-    font-size: 25px;
+    font-size: 35px;
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -79,7 +78,7 @@ body{
     top: 0px;
 }
 .home-content{
-    width: 900px ;
+    width: 100% ;
 }
 .home-content h1{
     font-size: 50px;
@@ -108,7 +107,8 @@ body{
     background-color: rgb(57, 110, 110);
     border-radius: 50px;
     padding: 10px 20px;
-    width: 600px;
+    width: 100%;
+    text-align: center;
 }
 .home-content p:hover{
     box-shadow: 0 0 50px rgb(65, 100, 100),
@@ -154,8 +154,8 @@ body{
     color: black;
 }
 .home-img img{
-    width: 40vh;
-    height: 40vh;
+    width: 100%;
+    height: 30vh;
     border-radius: 120px;
     position: relative;
     top: 40px;
@@ -176,22 +176,26 @@ body{
 
 }
 .about-text{
-    width: 800px ;
+    width: 100% ;
+    padding-left: 60px;
 }
 .about-img h1{
     visibility: hidden;
 }
 .about-img img{
     width: 100%;
-    border-radius: 100px;
-    padding: 40px 0px;
+    border-radius: 50px;
+    padding: 10px 0px;
     max-width: 100%;
-    height: 80%;
+    height: 60%;
     display: flex;
     margin: 10px;
+    top: 0%;
 }
 .about-text h2{
-    font-size: 30px;
+    font-size: 40px;
+    padding-left: 50px;
+    height: 60px;
 }
 .about-text h2 span{
     color: aqua;
@@ -202,6 +206,7 @@ body{
     color: rgb(212, 177, 80);
     line-height: 2;
     margin: 15px 0 30px;
+    text-align: center;
 }
 .about-text p{
     color: azure;
@@ -213,18 +218,20 @@ a{
     text-decoration: none;
     font-size: 25px;
     color: blueviolet;
+    text-align: center;
 }
 
 
 .Services{
     color: azure;
     font-size: 20px;
-    font-weight: 2;
+    font-weight:300;
     margin-bottom: 4rem;
     height: 120vh;
     padding: 50px 10px ;
     position: relative;
     top: 10px;
+    width: 100%;
 }
 .title{
     text-align: center;
@@ -360,7 +367,7 @@ a{
     border: none;
     outline: none;
     padding: 20px;
-    width: 90%;
+    width: 100%;
     background: rgb(230, 228, 228);
     color: rgb(31, 22, 22);
     font-size: 1rem;
@@ -390,16 +397,16 @@ a{
     box-shadow: 0 0 50px rgb(131, 126, 112),
     0 0 25px rgb(175, 172, 155), 0 0 50px rgb(194, 163, 98), 0 0 100px rgb(180, 146, 95),
     0 0 200px rgb(182, 174, 153); 
-}
 
-@media (max-width: 500px) {
+}
+@media (max-width: 768px) {
     .menu{
         display: none;
         flex-direction: column;
         background: rgb(70, 98, 114);
         position: absolute;
         top: 5px;
-        left: 360px;
+        left: 600px;
     }
     .menu.active{
         display: flex;
@@ -408,85 +415,76 @@ a{
     .menu-toggle{
         display: flex;
     }
-    body{
-        width: 400px;
-    }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:768px) {
     
     .home{
         flex-direction: column;
         gap: 10px;
-        height: 2000px;
         text-align: center;
         padding: 80px 0px;
         line-height: 5rem;
+        width: 100%;
+        height: 1350px;
     }
     .home-content h1{
-        width: 300px;
+        font-size: 65px;
     }
     .home-content h2{
-        width: 300px;
+        font-size: 55px;
     }
     .home-content h3{
-        width: 300px;
+        font-size: 50px;
     }
     .home-content p{
-        width: 300px;
-        padding: 5px;
+        font-size: 30px;
+        width: 100%;
     }
-    .home-scl a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
-    .home-scl .btn-box{
-        width: 20%;
-        height: 30px;
-    }
+
     .home-img img{
-        min-width: 200px;
-        position: relative;
-        top: 0px;
+      width: 40%;
+      height: 200px;  
+      justify-items: center;
+      top: 0%;
     }
 
     .about{
-        flex-direction: column;
         gap: 30px;
         padding: 90px 0;
-        height: 1200px;
-        width: 300px;
+        height: 800px;
+        justify-content: center;
     }
     .about-img h1{
         visibility:visible;
         color: rgb(247, 103, 103);
-        font-size: 37px;
+        font-size: 55px;
+        text-align: center;
     }
     .about-text h2{
         visibility: hidden;
     }
     .about-img img{
-        width: 280px; 
-        height: 400px;
+        width: 90%;
+        height: 250px;
     }
     .about-text{
         padding: 10px;
+        font-size: 35px;
     }
     .about-text p{
-        width: 300px;
+        width: 100%;
     }
 
     .Services{
-        height: 2200px;
+        height: 1600px;
         align-items: center;
-        padding: 35px 0px;
-        width: 300px;
+        padding: 30px 0px;
         justify-items: center;
+        width: 100%;
     }
     .container h1{
-        font-size: 35px;
+        font-size: 60px;
     }
     .Services-list h2{
         font-size: 20px;
@@ -507,32 +505,31 @@ a{
     .Contact{
         grid-template-columns: 1fr;
         padding: 100px 10px;
-        width: 300px;
         justify-items: center;
+        width: 100%;
     }
     .contact-text h2{
-        font-size: 38px;
-        height: 50px;
+        font-size: 60px;
+        height: 70px;
     }
     .contact-text h4{
-        font-size: 25px;
+        font-size: 45px;
         color: rgb(219, 145, 145);
     }
     .contact-text p{
-        font-size: 16px;
+        font-size: 25px;
         text-align: center;
     }
     .contact-list li{
         line-height: 2rem;
-        
+        font-size: 20px;
     }
     .contact-icone a{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+        margin-left: -5%;
+        margin: 30px ;
     }
     .contact-fars input , textarea{
         width: 100%;
         
     }
-}
+} 
